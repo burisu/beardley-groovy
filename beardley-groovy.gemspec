@@ -12,12 +12,12 @@ Gem::Specification.new do |spec|
   spec.homepage = "http://github.com/burisu/beardley-groovy"
   spec.license = "MIT"
 
-  exclusions = [ "#{spec.name}.gemspec", ".travis.yml", ".gitignore", "Gemfile", "Gemfile.lock", "Rakefile"]
-  spec.files = `git ls-files`.split("\n").delete_if{|f| exclusions.include?(f)}
+  spec.files = `git ls-files LICENSE.txt README.rdoc lib vendor`.split("\n")
   spec.extra_rdoc_files = [ "LICENSE.txt", "README.rdoc" ]
   spec.test_files = `git ls-files test/test_*.rb`.split("\n") 
   spec.require_path = "lib"
 
+  spec.add_dependency "beardley"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end

@@ -1,5 +1,5 @@
 module Beardley
   module Groovy
-    VERSION = "1.7.5.1"
+    VERSION = "2.0.0"
   end
 end
